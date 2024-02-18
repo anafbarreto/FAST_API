@@ -1,0 +1,42 @@
+Framework python especialmente projetado para criação de APIs.
+Tem diferencias em relação a facilidade de uso e performace.
+
+Caracteristicas:
+- Validação de dados com pydantic
+- Recursos assíncronos
+- Escalabilidade
+- Uvicorn e Starlette
+- Documentação automática
+
+Métodos Síncronos e Assíncronos:
+- Síncronos: vai ser executado um de cada vez, finaliza um e depois começa o outro
+- Assíncronos: executa multiplas tarefas 
+
+Criando o ambiente
+terminal: py -3 -m venv .nome_da_pasta
+
+Ativar o ambiente virtual
+terminal: .nome_da_pasta\scripts\activate (pode usar tab pra completar o caminho)
+Se rolar erro de bloqueio de excecução: Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
+
+Instalar o Fast API
+terminal: pip install "fastapi[all]" 
+o all traz todas as dependencias do Fast incluindo o Uvicorn que é responsavel pela parte de servidores, 
+gateways, junto tambem com o Starlette.
+Se rolar erro: pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org fastapi[all] -vvv
+** Com o ambiente virtual ativo
+
+Consultar a api criada
+terminal: uvicorn ex_models:app --reload
+
+Consulta
+http://127.0.0.1:8000/docs
+
+Thunder Client para fazer POST na API
+
+Guia sobre Markdown: https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+Deixar a documentação automatica mais bonita
+Comentar com """ detalhamento """
+
+
+
